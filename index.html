@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where in the World!</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- Load search icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Topmost bar -->
+    <div class="navBar">
+        <h1 class="logo">Where in the World?</h1>
+        <h4 class="darkMode-btn" onclick="changeMode()">
+            <i class="fa fa-moon-o"></i>
+            Light Mode
+        </h4>
+    </div>
+
+    <!-- loading animation  -->
+    <div id="loadingIcon">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Search and filter bar -->
+    <section class="main" id="main">
+        <div class="srchFilterBar">
+            <div class="search">
+                <!-- <i id="searchIcon">&#128269;</i> -->
+                <i id="searchIcon" class="fa fa-search"></i>
+                <input type="text" id="searchText" onkeyup="searchCountries()" placeholder="Search for a country...">
+            </div>
+            <div class="filter" id="filter">
+                <select name="filterButton" id="filterButton" onchange='filterCountries()'>
+                    <option value="all">Filter by Region</option>
+                </select>
+            </div>
+        </div>
+        <!-- main country cards container  -->
+        <div id="cardsContainer"></div>
+    </section>
+    <!-- country details page container  -->
+    <div id="detailViewContainer"></div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
